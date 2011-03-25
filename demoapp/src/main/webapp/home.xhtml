@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+		<h1><h:outputText value="Hello From JSF" /></h1>
+		
+		Go look at <code>BackingBean.java</code> to see the code for these lookups <br/>
+		<p/>
+		Message from injected provider = #{someBean.messageThroughInjection}<br/>
+		Message from manual provider lookup = #{someBean.messageFromManualLookup}<br/>
+		Direct Resolution on the provider Message = #{mp.content}<br/>
+		<p/>
+		Underlying CDI Bean Manager instance is = #{someBean.beanManager}		
+	</ui:define>
+</ui:composition>
