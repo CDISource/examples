@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_org_cdisource_springapp_Task" modelAttribute="task" path="/tasks" render="${empty dependencies}" z="zUIKbn6vXAkB3xMNU9DcQBNyYyQ=">
+        <field:checkbox field="done" id="c_org_cdisource_springapp_Task_done" z="nS1hH8upuKm3WIseY0qMaLOH864="/>
+        <field:input field="title" id="c_org_cdisource_springapp_Task_title" required="true" z="j1QYsIv4aFy+Y4DTT/DSFbVWAnI="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_org_cdisource_springapp_Task" render="${not empty dependencies}" z="p+p2vDjzyU9EgvflCb7YOFTeLCk="/>
+</div>

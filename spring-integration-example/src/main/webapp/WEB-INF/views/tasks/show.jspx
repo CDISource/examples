@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_cdisource_springapp_Task" object="${task}" path="/tasks" z="2esRV114OvDTlT0ins1CmHfyGM8=">
+        <field:display field="done" id="s_org_cdisource_springapp_Task_done" object="${task}" z="IqGcPq5wPBmOaBoNBOo5bo3fnzU="/>
+        <field:display field="title" id="s_org_cdisource_springapp_Task_title" object="${task}" z="HH1glNYP+x3OICBpCxPJ+Nvdx64="/>
+    </page:show>
+</div>
