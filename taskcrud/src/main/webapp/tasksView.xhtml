@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">	
+		<f:metadata>
+			<f:viewParam name="taskID" value="#{taskHome.id}" />
+			<f:event type="preRenderView" listener="#{taskHome.init}" />
+		</f:metadata>
+	
+		<h:form>
+			<h:panelGrid columns="3"> 
+				<h:outputLabel value="Title" for="title" />
+    			<h:inputText id="title" value="#{taskHome.task.title}" required="true" />
+        		<h:message for="title" />	
+				<h:outputLabel value="Done" for="done" />
+				<h:selectBooleanCheckbox id="done" value="#{taskHome.task.done}" />
+				<h:message for="done" />
+			</h:panelGrid>
+			
+			<h:commandButton action="#{taskHome.updateTask}" value="save"/>
+			<h:commandButton action="#{taskHome.newTask}" value="new"/>
+			
+		
+			<h:dataTable styleClass="dataTable" value="#{taskHome.tasks}" var="task">
+	
+				<h:column>
+					<f:facet name="header">ID</f:facet>
+					<h:outputText value="#{task.id}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">Title</f:facet>
+					<h:outputText value="#{task.title}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">Done</f:facet>
+					<h:outputText value="#{task.done}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">edit</f:facet>
+					<h:commandLink action="#{taskHome.editTask}" value="edit" >
+							<f:param name="taskID" value="#{task.id}" />	
+							edit the task					
+				   </h:commandLink>
+						
+				</h:column>
+				
+
+			</h:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>

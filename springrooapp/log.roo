@@ -1,0 +1,25 @@
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-04-07 17:15:52
+hint
+project --topLevelPackage org.cdisource.springapp
+hint
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity --class ~.Task --testAutomatically 
+hint
+field string --fieldName title --notNull
+field boolean --fieldName done 
+controller all --package ~.web
+perform tests
+perform tests
+perform eclipse
+exit
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-04-07 17:29:47
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-04-07 22:25:39
+exit
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-04-07 22:25:46
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-04-07 22:29:26
+exit
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-04-07 22:29:49
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log opened at 2011-04-09 11:30:16
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY --jndiDataSource jdbc/basic
+exit
+// Spring Roo 1.1.2.RELEASE [rev fbc33bb] log closed at 2011-04-09 11:33:54

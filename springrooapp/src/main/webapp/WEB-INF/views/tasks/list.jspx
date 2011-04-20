@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_cdisource_springapp_Task" items="${tasks}" z="VphiDb5rHu0vZnLxHZra6AxzEvU=">
+        <table:table data="${tasks}" id="l_org_cdisource_springapp_Task" path="/tasks" z="3xFRNFwlM27L6BLE1pDA1xE9LTw=">
+            <table:column id="c_org_cdisource_springapp_Task_done" property="done" z="uu0exzwxEXBccYc/HiugngaFtcA="/>
+            <table:column id="c_org_cdisource_springapp_Task_title" property="title" z="e26BXA9q8qZpj0ft+MRuMDaMWCg="/>
+        </table:table>
+    </page:list>
+</div>

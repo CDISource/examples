@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.cdisource.springapp</groupId>
-	<artifactId>springapp</artifactId>
+	<artifactId>springappintegration</artifactId>
 	<packaging>war</packaging>
 	<version>0.1.0.BUILD-SNAPSHOT</version>
-	<!-- <name>springapp</name> -->
+	<name>spring-integration</name>
 	<properties>
 		<roo.version>1.1.2.RELEASE</roo.version>
 		<spring.version>3.0.5.RELEASE</spring.version>
@@ -389,6 +389,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>springapp</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

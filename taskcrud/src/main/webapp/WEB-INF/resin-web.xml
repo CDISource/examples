@@ -1,0 +1,11 @@
+<web-app xmlns="http://caucho.com/ns/resin">
+
+
+<database jndi-name='jdbc/basic'>
+  <driver type="org.hsqldb.jdbcDriver">
+    <url>jdbc:hsqldb:db/hypersonic/localDB</url>
+    <user>sa</user>
+    <password></password>
+  </driver>
+</database>
+</web-app>

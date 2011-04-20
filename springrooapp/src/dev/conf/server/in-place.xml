@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resin xmlns="http://caucho.com/ns/resin" xmlns:resin="urn:java:com.caucho.resin">
+
+	<log-handler name="" level="all" path="stdout:"
+		timestamp="[%H:%M:%S.%s] {%{thread}} " />
+
+	<logger name="com.caucho" level="info" />
+
+	<system-property
+		javax.xml.parsers.DocumentBuilderFactory="com.caucho.xml.parsers.XmlDocumentBuilderFactory" />
+	<system-property javax.xml.parsers.SAXParserFactory="com.caucho.xml.parsers.XmlSAXParserFactory" />
+
+
+	<cluster id="">
+		<server id="" address="${system['resin.server.address']}">
+			<http port="${system['resin.server.port']}" />
+		</server>
+
+		<resin:import path="${__DIR__}/app-default.xml" />
+
+		<host id="" root-directory=".">
+			<web-app id="${system['resin.webapp.context']}"
+				root-directory="${system['resin.webapp.sourcedirectory']}">
+				<prologue>
+					<class-loader>
+						<library-loader path="${system['resin.server.home']}/webapp-jars/" />
+						<library-loader path="${system['resin.webapp.runtimelib']}" />
+						<compiling-loader path="WEB-INF/classes"
+							source="${system['resin.java.sourcedirectory']}" />
+						<library-loader path="WEB-INF/lib" />
+					</class-loader>
+				</prologue>
+			</web-app>
+		</host>
+	</cluster>
+</resin>
