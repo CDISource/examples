@@ -5,6 +5,14 @@
     <context:component-scan base-package="org.cdisource.springapp">
         <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
     </context:component-scan>
+    
+    
+    
+    <bean class="org.cdisource.springapp.TaskRepositoryFactoryBean" name="taskRespository">
+		<property name="beanManager"><jee:jndi-lookup jndi-name="java:comp/BeanManager"/></property>
+    </bean>
+    
+    
 
 
     <!-- 
@@ -36,10 +44,10 @@
           <bean class="org.cdisource.springintegration.CdiFactoryBean" name="taskRespository" >
      	<property name="beanClass" value="org.cdisource.springapp.TaskRepository"/>
      </bean>
+      <bean class="org.cdisource.springintegration.CdiBeanFactoryPostProcessor"/>
      
       -->
       
-      <bean class="org.cdisource.springintegration.CdiBeanFactoryPostProcessor"/>
       
       <!-- 
       
